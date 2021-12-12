@@ -22,8 +22,12 @@ Technology Type    |Name
  
  1) Clone repository:  ```git clone https://github.com/a-maccormack/django-react-deployment.git```
  
- 2) Build Project:     ```docker-compose build```
+ 2) Add all Cloudflare SSL certificates accordingly. ```nginx/ssl-certificates/```
  
- 3) Compose Up:        ```docker-compose up```
+ 3) Uncomment and modify lines: 9,10,19,20,21 in ```nginx/nginx-proxy.conf``` to include your newly added SSL certificates.
  
- 4) You're done!
+ 4) Build Project: ```docker-compose build```
+ 
+ 5) Compose Up: ```docker-compose up```
+ 
+ 6) You're done!
