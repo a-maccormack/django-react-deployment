@@ -24,6 +24,10 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_WHITELIST = os.environ.get("CORS_ORIGIN_WHITELIST").split(" ")
 
+#----------------SSL---------------
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+
 #-----------Applications-----------
 
 INSTALLED_APPS = [
